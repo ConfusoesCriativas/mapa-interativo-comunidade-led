@@ -30,9 +30,6 @@ As bibliotecas de mapa e a fonte são carregadas por serviços externos. Todos o
 - [Arquitetura](docs/ARQUITETURA.md)
 - [Dados e regras](docs/DADOS-E-REGRAS.md)
 - [Deploy e domínio](docs/DEPLOY-E-DOMINIO.md)
-- [Handoff para TI](docs/HANDOFF-GLOBO.md)
-- [Fontes externas](docs/FONTES-E-DEPENDENCIAS.md)
-- [Pendências conhecidas](docs/PENDENCIAS.md)
 
 ## Propriedade e licenciamento
 
