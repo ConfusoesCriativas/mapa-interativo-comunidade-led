@@ -1,66 +1,64 @@
-## Visão geral
+# Arquitetura
 
-O mapa é uma aplicação estática executada integralmente no navegador.
+Atualizado em 28/09/2026 com base na versão publicada em https://mapaled.linkscc.com.br.
 
-1. A Vercel entrega `index.html` e as imagens.
-2. O navegador carrega Leaflet, MarkerCluster e Poppins.
-3. O JavaScript lê a constante `projects`, cria filtros, indicadores, cartões, marcadores e agrupamentos.
-4. O Leaflet solicita os blocos do mapa ao OpenStreetMap.
-5. Não há chamadas para API própria, banco de dados ou serviço de autenticação.
+## Escopo e estado do repositório
+A versão em produção usa Sites e inclui Início, Mapa de iniciativas e Portfólio. O código neste GitHub ainda é a versão anterior do mapa, com `index.html`, `images/`, `scripts/` e `package.json`. A documentação descreve a evolução publicada; os arquivos novos precisam ser sincronizados antes de este repositório reproduzir o portal completo.
 
-## Estrutura
+## Execução
+1. A hospedagem entrega arquivos estáticos.
+2. O navegador carrega a estrutura, os estilos e os scripts.
+3. A constante `projects` em `index.html` alimenta os filtros, cartões e marcadores.
+4. Leaflet solicita os blocos do mapa ao OpenStreetMap.
+5. A aba Portfólio inicializa PageFlip e carrega imagens das páginas próximas.
+6. O botão de download entrega o PDF original.
 
-```text
-mapa-interativo-comunidade-led/
-├── index.html
-├── images/
-├── scripts/
-│   └── validate.mjs
-├── docs/
-├── package.json
-└── README.md
-```
+Não há API própria, banco de dados, autenticação ou sincronização automática com planilha/CMS.
 
-## Componentes
+## Raiz pública da versão atual
 
-### Interface
+| Caminho | Responsabilidade |
+| --- | --- |
+| `index.html` | Estrutura, dados e lógica do mapa |
+| `assets/portal.css` | Estilos do portal, carrossel e livro |
+| `assets/portal.js` | Navegação entre abas, controles e flipbook |
+| `assets/logo.svg` | Marca do cabeçalho |
+| `assets/favicon-led.png` | Ícone do navegador |
+| `assets/portfolio-led.pdf` | E-book original |
+| `images/` | 104 fotos WebP |
+| `book/` | 166 páginas WebP numeradas |
+| `vendor/page-flip.js` | PageFlip local |
 
-O HTML, o CSS e o JavaScript estão no mesmo arquivo. A interface possui:
+No projeto Sites, os caminhos ficam dentro de `dist/`. Para hospedagem estática externa, use o conteúdo dessa pasta como raiz pública. A estrutura antiga do GitHub usa a raiz do repositório. Um único HTML não contém o portal completo.
 
-- cabeçalho e indicadores;
-- busca por texto;
-- filtro por edição;
-- filtro de vencedores do Prêmio LED;
-- filtro de vencedores do Desafio LED;
-- mapa com marcadores agrupados;
-- lista de participantes;
-- modal com detalhes e link para Instagram.
+## Interface
+- `#inicio`: texto à esquerda, acessos à direita e carrossel de embaixadores.
+- `#mapa`: indicadores, busca, filtros, mapa, lista e detalhes. O primeiro indicador mostra “105 iniciativas”. Os botões de zoom foram removidos.
+- `#portfolio`: livro interativo de 166 páginas e download. `#ebook` é um alias.
+- Navegação compartilhada entre as abas; espaço da barra de rolagem reservado para reduzir deslocamentos.
 
-### Dados
+O carrossel usa 104 fotos únicas em dois grupos iguais para produzir o ciclo contínuo. Inicia automaticamente e possui controle de pausa por ícone. As legendas são uma apresentação abreviada em duas linhas; não alteram os nomes completos da base. “Felipe Rodrigues e Fabrina da Silva Carvalho” aparece no carrossel como “Felipe Rodrigues”. As legendas e os grupos estão no HTML; não se regeneram automaticamente quando a base é editada.
 
-A constante `projects`, dentro de `index.html`, contém os 105 perfis. Não existe sincronização automática com planilha ou CMS.
+## Estado e conteúdo
+O estado dos filtros é local à página e não persiste no servidor. O PDF e suas páginas são arquivos independentes da base de perfis; alterações no mapa não alteram o e-book.
 
-### Estado
+## Dependências
 
-Os filtros são mantidos somente durante a sessão da página. Não existe persistência no servidor.
+| Dependência | Versão | Origem |
+| --- | --- | --- |
+| Leaflet | 1.9.4 | unpkg.com |
+| Leaflet.markercluster | 1.5.3 | unpkg.com |
+| PageFlip | 2.0.7 | `vendor/page-flip.js`, local |
+| Poppins | pesos definidos no HTML | Google Fonts |
+| OpenStreetMap | serviço externo | blocos de mapa |
 
-### Segurança
+## Manutenção
+Consulte [E-book e flipbook](EBOOK-E-FLIPBOOK.md) para substituição, geração de páginas, controle de cache e validação. Os scripts antigos do repositório não devem ser considerados uma validação completa do portal ou do e-book.
 
-Não há segredos ou tokens necessários para executar a versão atual. Como os dados são incorporados ao JavaScript, qualquer informação cadastrada fica pública para visitantes do site.
-
-## Dependências externas
-
-| Dependência | Versão | Finalidade | Origem atual |
-| --- | --- | --- | --- |
-| Leaflet | 1.9.4 | Renderização do mapa | unpkg.com |
-| Leaflet.markercluster | 1.5.3 | Agrupamento de marcadores | unpkg.com |
-| OpenStreetMap | serviço externo | Mapa-base | tile.openstreetmap.org |
-| Poppins | variável por peso | Tipografia | fonts.googleapis.com e fonts.gstatic.com |
-
-## Limitações técnicas
-
-- Atualizações de conteúdo exigem edição do código e novo deploy.
-- A disponibilidade do mapa-base depende do OpenStreetMap.
-- As bibliotecas são carregadas por CDN e não estão copiadas para o repositório.
-- Não há testes automatizados de interface.
-- Não há ambiente administrativo para equipes de conteúdo.
+## Limitações
+- Atualizar conteúdo exige editar arquivos e publicar novamente.
+- Não há painel administrativo.
+- O mapa-base, as fontes e as bibliotecas do mapa dependem de serviços externos.
+- O leitor usa imagens e não oferece pesquisa ou seleção do texto.
+- Não existe suíte automatizada de interface registrada neste repositório.
+- Nenhum segredo é necessário para executar o site; o conteúdo entregue ao navegador é público.
