@@ -1,35 +1,39 @@
-# Mapa Interativo da Comunidade LED
+# Comunidade LED: mapa e portfólio
 
-Aplicação web estática que apresenta participantes, projetos e vencedores das edições do Prêmio LED e do Desafio LED em um mapa do Brasil.
+Portal estático da Comunidade LED, com apresentação, mapa de iniciativas e e-book interativo.
 
-## Produção
+## Produção e sincronização
 
-- URL: https://mapaled.linkscc.com.br
-- Hospedagem atual: Vercel
-- Idioma: português do Brasil
-- Perfis cadastrados: 105
-- Cidades: 62
-- Vencedores do Prêmio LED: 34
-- Vencedores do Desafio LED: 10, considerando somente primeiro e segundo lugares de cada edição
+- Site publicado: https://mapaled.linkscc.com.br
+- Hospedagem da versão documentada em 28/09/2026: Sites.
+- Idioma: português do Brasil.
+- 105 perfis; 34 vencedores do Prêmio LED e 10 do Desafio LED (primeiro e segundo lugares).
+- Portfólio: PDF de 166 páginas, com flipbook e download.
+
+**Estado do GitHub:** o código deste repositório ainda corresponde à versão anterior do mapa. Esta atualização publica a documentação da versão em produção; não inclui a sincronização do HTML, do PDF ou das imagens do flipbook. Consulte o guia do e-book antes de implantar a versão completa em outra hospedagem.
 
 ## Tecnologia
 
-O projeto não possui backend, banco de dados, autenticação nem etapa de compilação.
+HTML, CSS e JavaScript, sem React, Next.js, backend, banco de dados, autenticação ou compilação obrigatória.
 
-- HTML, CSS e JavaScript em `index.html`
-- Leaflet 1.9.4
-- Leaflet.markercluster 1.5.3
-- OpenStreetMap como mapa-base
-- Google Fonts, família Poppins
-- Imagens locais em `images/`
+| Componente | Tecnologia |
+| --- | --- |
+| Mapa | Leaflet 1.9.4 e Leaflet.markercluster 1.5.3 |
+| Mapa-base | OpenStreetMap |
+| Tipografia | Poppins via Google Fonts |
+| Flipbook | PageFlip 2.0.7, arquivo JavaScript local |
+| Fotos e páginas | WebP local |
+| Download | PDF original servido pelo próprio site |
 
-As bibliotecas de mapa e a fonte são carregadas por serviços externos. Todos os dados dos participantes são entregues ao navegador e podem ser consultados no código-fonte da página.
+Na versão atual, `index.html` reúne estrutura, dados e mapa; `assets/portal.css` e `assets/portal.js` complementam o portal. As bibliotecas do mapa e as fontes vêm de serviços externos. Os dados incorporados no código são públicos.
 
 ## Documentação
 
-- [Arquitetura](docs/ARQUITETURA.md)
+- [Arquitetura e estrutura de publicação](docs/ARQUITETURA.md)
+- [E-book: arquivos, funcionamento, atualização e validação](docs/EBOOK-E-FLIPBOOK.md)
 - [Dados e regras](docs/DADOS-E-REGRAS.md)
-- [Fontes e Dependências](docs/FONTES-E-DEPENDENCIAS.md)
+- [Fontes e dependências](docs/FONTES-E-DEPENDENCIAS.md)
+
 ## Propriedade e licenciamento
 
-O repositório reúne conteúdo produzido para a Comunidade LED. Nenhuma licença pública foi atribuída. O uso, a redistribuição e a publicação devem seguir as orientações da Globo e dos responsáveis pelo projeto.
+O repositório reúne conteúdo produzido para a Comunidade LED. Nenhuma licença pública foi atribuída ao conteúdo do projeto. O uso, a redistribuição e a publicação devem seguir as orientações da Globo e dos responsáveis pelo projeto. As bibliotecas de terceiros mantêm suas próprias licenças.
