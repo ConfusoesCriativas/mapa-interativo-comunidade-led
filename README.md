@@ -25,49 +25,6 @@ O projeto não possui backend, banco de dados, autenticação nem etapa de compi
 
 As bibliotecas de mapa e a fonte são carregadas por serviços externos. Todos os dados dos participantes são entregues ao navegador e podem ser consultados no código-fonte da página.
 
-## Executar localmente
-
-O arquivo pode ser aberto diretamente no navegador. Para evitar restrições do navegador com arquivos locais, recomenda-se um servidor HTTP simples:
-
-```powershell
-cd "C:\caminho\mapa-interativo-comunidade-led"
-npx.cmd serve .
-```
-
-Depois, abra o endereço informado pelo terminal.
-
-## Validar os dados
-
-É necessário ter Node.js instalado.
-
-```powershell
-npm.cmd run validate
-```
-
-A validação confere:
-
-- quantidade de perfis e vencedores;
-- existência das imagens referenciadas;
-- correspondência entre os vencedores e os perfis cadastrados;
-- coordenadas geográficas;
-- duplicidade de arquivos de foto.
-
-## Publicar na Vercel
-
-Para uma publicação de teste:
-
-```powershell
-npx.cmd vercel
-```
-
-Para produção:
-
-```powershell
-npx.cmd vercel --prod
-```
-
-O fluxo institucional recomendado é conectar este repositório ao projeto da Vercel e publicar a branch principal somente após validação em Preview.
-
 ## Documentação
 
 - [Arquitetura](docs/ARQUITETURA.md)
