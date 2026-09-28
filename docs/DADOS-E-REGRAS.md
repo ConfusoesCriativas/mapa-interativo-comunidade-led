@@ -1,5 +1,3 @@
-# Dados e regras
-
 ## Base de Dados
 Todas informações foram extraídas de fontes oficiais, tratadas e organizadas na planilha:
 
