@@ -29,7 +29,6 @@ As bibliotecas de mapa e a fonte são carregadas por serviços externos. Todos o
 
 - [Arquitetura](docs/ARQUITETURA.md)
 - [Dados e regras](docs/DADOS-E-REGRAS.md)
-- [Deploy e domínio](docs/DEPLOY-E-DOMINIO.md)
 
 ## Propriedade e licenciamento
 
