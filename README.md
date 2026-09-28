@@ -29,7 +29,7 @@ As bibliotecas de mapa e a fonte são carregadas por serviços externos. Todos o
 
 - [Arquitetura](docs/ARQUITETURA.md)
 - [Dados e regras](docs/DADOS-E-REGRAS.md)
-
+- [Fontes e Dependências](docs/FONTES-E-DEPENDENCIAS.md)
 ## Propriedade e licenciamento
 
 O repositório reúne conteúdo produzido para a Comunidade LED. Nenhuma licença pública foi atribuída. O uso, a redistribuição e a publicação devem seguir as orientações da Globo e dos responsáveis pelo projeto.
