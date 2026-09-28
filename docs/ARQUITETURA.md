@@ -1,5 +1,3 @@
-# Arquitetura
-
 ## Visão geral
 
 O mapa é uma aplicação estática executada integralmente no navegador.
