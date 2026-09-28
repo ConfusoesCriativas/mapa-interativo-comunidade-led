@@ -1,5 +1,3 @@
-# Fontes e dependências
-
 ## Fontes institucionais
 
 - Movimento LED: https://somos.globo.com/movimento-led/
