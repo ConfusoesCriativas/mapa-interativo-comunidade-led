@@ -1,0 +1,9 @@
+{
+  "name": "mapa-interativo-comunidade-led",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mapa interativo dos participantes e vencedores da Comunidade LED",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  }
+}
