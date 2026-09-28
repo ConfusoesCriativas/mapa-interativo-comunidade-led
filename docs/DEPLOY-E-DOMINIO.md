@@ -1,5 +1,3 @@
-# Deploy e domínio
-
 ## Situação atual
 
 - Produção: https://mapaled.linkscc.com.br
