@@ -1,5 +1,14 @@
 # Dados e regras
 
+## Base de Dados
+Todas informações foram extraídas de fontes oficiais, tratadas e organizadas na planilha:
+
+```text
+https://docs.google.com/spreadsheets/d/1HiLGjir9cYLaBS6-y6v6FL1mqb8dfsJCz8CLYZ92HdU/edit?usp=sharing
+```
+
+
+
 ## Estrutura de um perfil
 
 Cada item da constante `projects` usa os seguintes campos:
