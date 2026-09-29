@@ -1,6 +1,3 @@
-# E-book e flipbook
-Atualizado em 28/09/2026. Este documento descreve a versão publicada em https://mapaled.linkscc.com.br/#portfolio.
-
 ## Estado da integração
 A publicação atual usa Sites. Na conferência desta atualização documental, o GitHub ainda continha a versão anterior do mapa, sem as pastas `assets/`, `book/` e `vendor/`. Publicar esta documentação não sincroniza os arquivos do site nem adiciona o e-book ao deploy deste repositório.
 
@@ -63,12 +60,7 @@ for numero in range(1, total + 1):
 print(f"{total} páginas válidas")
 ```
 
-As páginas 32, 72, 113, 133 e 153 tinham arquivos vazios e foram regeneradas. As 166 imagens passaram por decodificação após a correção. A validação de arquivos não substitui teste visual do flipbook.
-
 ## Publicação em outra hospedagem
 Copie o conteúdo completo da raiz pública, preservando caminhos relativos. No Sites, essa raiz é `dist/`; na estrutura antiga deste GitHub, `index.html` fica na raiz do repositório. Não crie um nível extra de pasta sem ajustar a raiz de publicação.
 
 Não há compilação obrigatória, backend, banco de dados ou segredos para o leitor. O PDF e as imagens devem ser servidos pelo mesmo site. Confira os limites de tamanho por arquivo do destino: o PDF atual tem aproximadamente 24,9 MiB.
-
-## Limites
-O flipbook baseado em imagens não oferece seleção ou pesquisa do texto do PDF nem leitura estrutural de seu conteúdo por leitor de tela. O download fornece o documento original. O livro é independente de serviços de flipbook externos; mapa-base, bibliotecas do mapa e fontes ainda dependem de rede.
