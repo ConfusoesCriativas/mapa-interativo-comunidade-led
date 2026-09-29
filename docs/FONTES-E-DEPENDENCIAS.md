@@ -22,15 +22,6 @@ Os resultados e as classificações devem ser conferidos em publicações oficia
 - O leitor não usa Heyzine. A referência ao serviço descreve apenas a experiência visual desejada.
 - [Guia técnico do e-book](EBOOK-E-FLIPBOOK.md).
 
-## Hospedagem
-
-A versão documentada em 28/09/2026 está publicada pelo Sites no domínio mapaled.linkscc.com.br. As referências Vercel abaixo são de transferência e implantação alternativa. Os arquivos da versão nova ainda precisam ser sincronizados com este repositório.
-
-
-- Vercel Deployments: https://vercel.com/docs/deployments
-- Vercel Domains: https://vercel.com/docs/domains
-- Transferência de projetos: https://vercel.com/docs/projects/transferring-projects
-
 ## Dependências carregadas no navegador
 
 ```text
