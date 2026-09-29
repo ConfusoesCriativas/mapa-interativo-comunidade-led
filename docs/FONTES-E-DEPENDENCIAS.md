@@ -40,14 +40,3 @@ https://fonts.googleapis.com/
 https://fonts.gstatic.com/
 https://tile.openstreetmap.org/
 ```
-
-## Avaliação recomendada
-
-Para uma operação institucional, avaliar:
-
-- hospedagem local das bibliotecas em vez de CDN pública;
-- política de segurança de conteúdo;
-- integridade dos arquivos externos;
-- limites e política de uso do provedor de mapa-base;
-- monitoramento de disponibilidade;
-- varredura periódica de dependências.
