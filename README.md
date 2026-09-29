@@ -9,8 +9,6 @@ Portal estático da Comunidade LED, com apresentação, mapa de iniciativas e e-
 - 105 perfis; 34 vencedores do Prêmio LED e 10 do Desafio LED (primeiro e segundo lugares).
 - Portfólio: PDF de 166 páginas, com flipbook e download.
 
-**Estado do GitHub:** o código deste repositório ainda corresponde à versão anterior do mapa. Esta atualização publica a documentação da versão em produção; não inclui a sincronização do HTML, do PDF ou das imagens do flipbook. Consulte o guia do e-book antes de implantar a versão completa em outra hospedagem.
-
 ## Tecnologia
 
 HTML, CSS e JavaScript, sem React, Next.js, backend, banco de dados, autenticação ou compilação obrigatória.
