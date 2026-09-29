@@ -5,7 +5,6 @@ Portal estático da Comunidade LED, com apresentação, mapa de iniciativas e e-
 ## Produção e sincronização
 
 - Site publicado: https://mapaled.linkscc.com.br
-- Hospedagem da versão documentada em 28/09/2026: Sites.
 - Idioma: português do Brasil.
 - 105 perfis; 34 vencedores do Prêmio LED e 10 do Desafio LED (primeiro e segundo lugares).
 - Portfólio: PDF de 166 páginas, com flipbook e download.
