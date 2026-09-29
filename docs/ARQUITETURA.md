@@ -1,7 +1,3 @@
-# Arquitetura
-
-Atualizado em 28/09/2026 com base na versão publicada em https://mapaled.linkscc.com.br.
-
 ## Escopo e estado do repositório
 A versão em produção usa Sites e inclui Início, Mapa de iniciativas e Portfólio. O código neste GitHub ainda é a versão anterior do mapa, com `index.html`, `images/`, `scripts/` e `package.json`. A documentação descreve a evolução publicada; os arquivos novos precisam ser sincronizados antes de este repositório reproduzir o portal completo.
 
